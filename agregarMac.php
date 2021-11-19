@@ -4,11 +4,12 @@
 $idCultivo = $_POST['Cultivo_id'];
 $Sensores_nombre = $_POST['Sensores_nombre'];
 
-$sql = "INSERT INTO sensores values ('', 1, null,null,'$Sensores_nombre')";
+$sql = "INSERT INTO sensores(Sensores_estado, Sensores_nombre)  values (1,$Sensores_nombre);";
 
 $query = $mysqli->query($sql);
 
-$idSensor = $mysqli->query('SELECT LAST_INSERT_ID() from sensores;');
+$idSensor = $mysqli->query("SELECT LAST_INSERT_ID() from sensores;")->fetch_row()[0];
+var_dump($idSensor);
 $addSensor = $mysqli->query("UPDATE Sensores_id = $idSensor where Cultivo_id = $idCultivo");
 
 ?>
