@@ -8,7 +8,7 @@ $sql = "INSERT INTO sensores(Sensores_estado, Sensores_nombre)  values (1,$Senso
 
 $query = $mysqli->query($sql);
 $mysqli -> query($sql);
-
+echo "New record has id: " . $mysqli -> insert_id;
 $last = $mysqli -> insert_id;
 
 print("ultimo: ". $last);
