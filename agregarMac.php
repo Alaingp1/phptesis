@@ -9,12 +9,11 @@ $sql = "INSERT INTO sensores(Sensores_estado, Sensores_nombre)  values (1,$Senso
 $query = $mysqli->query($sql);
 
 
-mysqli_insert_id
+$sql = "SELECT LAST_INSERT_ID() from sensores";
 
-$last_id = mysqli_insert_id($mysqli);
-print('al waa: '. $last_id);
+$last = $mysqli->insert_id;
 
-print("ultimo: ". $vote[0]);
+print("ultimo: ". $lastInsert);
 $mysqli->query("UPDATE Cultivo SET Sensores_id = $lastInsert where Cultivo_id = $idCultivo");
 
 ?>
