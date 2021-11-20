@@ -9,9 +9,9 @@ $sql = "INSERT INTO sensores(Sensores_estado, Sensores_nombre)  values (1,$Senso
 $query = $mysqli->query($sql);
 
 
-$sql = "SELECT LAST_INSERT_ID() from sensores";
+mysqli_insert_id
 
-$lastInsert = $mysqli->query($sql)->fetch_assoc();
+$lastInsert = $mysqli->mysqli_insert_id($sql);
 foreach ($lastInsert as $fila) {
     $vote[] = $fila[0]);		
 }
