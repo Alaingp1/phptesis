@@ -11,10 +11,8 @@ $query = $mysqli->query($sql);
 
 mysqli_insert_id
 
-$lastInsert = $mysqli->mysqli_insert_id($sql);
-foreach ($lastInsert as $fila) {
-    $vote[] = $fila[0]);		
-}
+$lastInsert = mysqli_insert_id($mysqli);
+print('al waa: '. $lastInsert);
 
 print("ultimo: ". $vote[0]);
 $mysqli->query("UPDATE Cultivo SET Sensores_id = $lastInsert where Cultivo_id = $idCultivo");
