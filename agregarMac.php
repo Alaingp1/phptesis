@@ -12,7 +12,7 @@ $query = $mysqli->query($sql);
 $sql = "SELECT LAST_INSERT_ID() from sensores";
 
 $lastInsert = $mysqli->query($sql);
-print("ultimo: $lastInsert");
+print("ultimo: ${lastInsert.toString()}");
 $mysqli->query("UPDATE Cultivo SET Sensores_id = $lastInsert where Cultivo_id = $idCultivo");
 
 ?>
