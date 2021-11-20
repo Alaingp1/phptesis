@@ -9,9 +9,10 @@ $sql = "INSERT INTO sensores(Sensores_estado, Sensores_nombre)  values (1,$Senso
 $query = $mysqli->query($sql);
 
 
-$sql = "Select LAST_INSERT_ID() from Sensores";
-$lastInsert = $mysqli->query($sql);
+$sql = "SELECT LAST_INSERT_ID() from sensores";
 
-$addSensor = $mysqli->query("UPDATE Cultivo SET Sensores_id = $lastInsert where Cultivo_id = $idCultivo");
+$lastInsert = $mysqli->query($sql);
+var_dump($lastInsert);
+$mysqli->query("UPDATE Cultivo SET Sensores_id = $lastInsert where Cultivo_id = $idCultivo");
 
 ?>
