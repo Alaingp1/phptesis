@@ -12,8 +12,11 @@ $query = $mysqli->query($sql);
 $sql = "SELECT LAST_INSERT_ID() from sensores";
 
 $lastInsert = $mysqli->query($sql)->fetch_assoc();
+foreach ($lastInsert as $fila) {
+    $vote[] = $fila[0]);		
+}
 
-print("ultimo: ". $lastInsert.toString());
+print("ultimo: ". $vote[0]);
 $mysqli->query("UPDATE Cultivo SET Sensores_id = $lastInsert where Cultivo_id = $idCultivo");
 
 ?>
