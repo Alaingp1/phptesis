@@ -4,7 +4,7 @@
 
     
         
-    $sql = "SELECT c.Cultivo_apodo, c.Cultivo_imagen, tc.Tipo_nombre ,c.Cultivo_id , s.Sensores_nombre FROM cultivo AS c INNER JOIN Tipo_cultivo AS tc ON c.Tipo_id = tc.Tipo_id INNER JOIN sensores AS s ON c.Sensores_id = s.Sensores_id WHERE Cultivo_estado = 1 AND Usuario_id =  " . $_GET["Usuario_id"];
+    $sql = "SELECT c.Cultivo_apodo, c.Cultivo_imagen, tc.Tipo_nombre ,c.Cultivo_id , s.Sensores_nombre FROM cultivo AS c INNER JOIN Tipo_cultivo AS tc ON c.Tipo_id = tc.Tipo_id INNER JOIN sensores AS s ON s.Sensores_id = c.Sensores_id WHERE Cultivo_estado = 1 AND Usuario_id =  " . $_GET["Usuario_id"];
 
 
 
