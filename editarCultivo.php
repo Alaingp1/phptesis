@@ -5,7 +5,7 @@
     $id_Usuario = $_POST['Usuario_id'];
     $id_Cultivo = $_POST['Cultivo_id'];
     $Cultivo_apodo = $_POST['Cultivo_apodo'];
-    $idtipo = $_GET['Tipo_id'];
+    $idtipo = $_POST['Tipo_id'];
     $Cultivo_imagen = $_POST['Cultivo_imagen'];
    
  
