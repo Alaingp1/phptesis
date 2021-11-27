@@ -8,11 +8,11 @@
 
 
 
-    $query = $mysqli->query($sql);
+    $querya = $mysqli->query($sql);
     
     $datos = array();
-    
-    while($resultado = $query->fetch_assoc()) {
+         
+    while($resultado = $querya->fetch_assoc()) {
         $datos[] = $resultado;
     }
     header('Content-Type: application/json');
